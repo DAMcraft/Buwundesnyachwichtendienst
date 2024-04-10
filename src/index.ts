@@ -43,7 +43,7 @@ const alwaysReplaceMap = new Map<RegExp, string>([
 
 // Text that should ONLY be replaced in text content
 const textReplaceMap = new Map<RegExp, string>([
-	[/Bundesnachrichtendienst/g, "Buwudesnyachwichtendienst"],
+	[/Bundesnachrichtendienst/g, "Buwundesnyachwichtendienst"],
 	[/BND/g, "BNDUwU"],
 	[/[rl]/g, "w"],
 	[/[RL]/g, "W"],

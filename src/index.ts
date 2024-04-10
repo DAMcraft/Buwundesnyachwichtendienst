@@ -81,6 +81,14 @@ export default {
 			newText = newText.replace(key, value);
 		});
 
+		if (contentType?.startsWith('text/xml')) {
+			return new Response(newText, {
+				status: res.status,
+				statusText: res.statusText,
+				headers: res.headers,
+			});
+		}
+
 		newText = await new HTMLRewriter().on('*', {
 			// Replace text content
 			text(text) {

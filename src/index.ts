@@ -60,7 +60,7 @@ export default {
 		let res = await fetch("https://" + proxyTo + url.pathname + url.search, request);
 
 		const contentType = res.headers.get('content-type');
-		if (contentType && !contentType.startsWith('text')) {
+		if (!contentType || !contentType?.startsWith('text')) {
 			return res;
 		}
 
